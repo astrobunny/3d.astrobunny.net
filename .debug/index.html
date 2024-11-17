@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<!-- Generated using weaver: https://github.com/davidsiaw/weaver -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../css/plugins/iCheck/custom.css" rel="stylesheet">
+
+    	<link href="../css/style.css" rel="stylesheet">
+
+
+    <link href="../css/animate.css" rel="stylesheet">
+
+    <link href="../css/indigo-manual.css" rel="stylesheet">
+
+
+
+
+</head>
+
+<body class='gray-bg'>
+
+<div id="background" style="z-index: -999; position:absolute; left:0px; right:0px; width:100%; height:100%">
+
+</div>
+
+<div id="content" style="z-index: 0">
+
+        <div id="wrapper">
+	        <div class="wrapper-content">
+	            <div class="container">
+<div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <pre>section
+type: para
+headerlevel: 0
+listlevel: 0
+blocks 1
+</pre><blockquote><ol><li><pre>block
+tag: div
+type: empty
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li></ol></blockquote>
+  </div>
+</div><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <pre>section
+type: header
+headerlevel: 1
+listlevel: 0
+blocks 1
+</pre><blockquote><ol><li><pre>block
+tag: header
+type: single
+level: 1
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: NiceDoc Template
+    :start: 0
+    :end: 15
+  :rawparse: []
+  :rawtext: NiceDoc Template
+
+> NiceDoc Template
+</pre></li></ol><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <pre>section
+type: para
+headerlevel: 0
+listlevel: 0
+blocks 3
+</pre><blockquote><ol><li><pre>block
+tag: div
+type: empty
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: div
+type: implicit
+level: 0
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: This is a template NiceDoc project.
+    :start: 0
+    :end: 34
+  :rawparse: []
+  :rawtext: This is a template NiceDoc project.
+
+> This is a template NiceDoc project.
+</pre></li><li><pre>block
+tag: div
+type: empty
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li></ol></blockquote>
+  </div>
+</div><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <pre>section
+type: header
+headerlevel: 2
+listlevel: 0
+blocks 1
+</pre><blockquote><ol><li><pre>block
+tag: header
+type: single
+level: 2
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: How to use
+    :start: 0
+    :end: 9
+  :rawparse: []
+  :rawtext: How to use
+
+> How to use
+</pre></li></ol><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <pre>section
+type: para
+headerlevel: 0
+listlevel: 0
+blocks 1
+</pre><blockquote><ol><li><pre>block
+tag: ol
+type: list
+level: 0
+lines: 0
+info: ---
+:tags:
+- &1
+  :type: :branch
+  :parent:
+  :level: 0
+  :tag: :ol
+  :children:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+- :type: :leaf
+  :parent: *1
+  :text:
+  - Copy these files to your project
+- :type: :leaf
+  :parent: *1
+  :text:
+  - "`ssh-keygen -f deploykey` and create a key with no passphrase (just hit Enter
+    until its all done)"
+- :type: :leaf
+  :parent: *1
+  :text:
+  - Copy the contents of `deploykey` into a variable named `DEPLOYKEY`
+- :type: :leaf
+  :parent: *1
+  :text:
+  - Go to settings>security>deploy keys
+- :type: :leaf
+  :parent: *1
+  :text:
+  - Click on create new deploy key and copy the contents of `deploykey.pub` into the
+    textbox and check "Allow Write Access"
+- :type: :leaf
+  :parent: *1
+  :text:
+  - Create a `gh-pages` branch in your project and push it.
+- :type: :leaf
+  :parent: *1
+  :text:
+  - Push the files to your main repo
+:last: *1
+
+parse: ---
+- :type: :branch
+  :parent:
+  :level: 0
+  :tag: :ol
+  :children: &1
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+- :type: :leaf
+  :parent: &2
+    :type: :branch
+    :parent:
+    :level: 0
+    :tag: :ol
+    :children: *1
+  :text:
+  - Copy these files to your project
+  :parse:
+  - :array:
+    - :styles: []
+      :text: Copy these files to your project
+      :start: 0
+      :end: 31
+    :rawparse: []
+    :rawtext: Copy these files to your project
+- :type: :leaf
+  :parent: *2
+  :text:
+  - "`ssh-keygen -f deploykey` and create a key with no passphrase (just hit Enter
+    until its all done)"
+  :parse:
+  - :array:
+    - :styles:
+      - :code
+      :text: ssh-keygen -f deploykey
+      :start: 1
+      :end: 23
+    - :styles: []
+      :text: " and create a key with no passphrase "
+      :start: 23
+      :end: 63
+    - :styles:
+      - :parens
+      :text: just hit Enter until its all done
+      :start: 63
+      :end: 95
+    :rawparse:
+    - :tag: :code
+      :start: 1
+      :end: 23
+    - :tag: :parens
+      :start: 63
+      :end: 95
+    :rawtext: "`ssh-keygen -f deploykey` and create a key with no passphrase (just
+      hit Enter until its all done)"
+- :type: :leaf
+  :parent: *2
+  :text:
+  - Copy the contents of `deploykey` into a variable named `DEPLOYKEY`
+  :parse:
+  - :array:
+    - :styles: []
+      :text: 'Copy the contents of '
+      :start: 0
+      :end: 22
+    - :styles:
+      - :code
+      :text: deploykey
+      :start: 22
+      :end: 30
+    - :styles: []
+      :text: " into a variable named "
+      :start: 30
+      :end: 56
+    - :styles:
+      - :code
+      :text: DEPLOYKEY
+      :start: 56
+      :end: 64
+    :rawparse:
+    - :tag: :code
+      :start: 22
+      :end: 30
+    - :tag: :code
+      :start: 56
+      :end: 64
+    :rawtext: Copy the contents of `deploykey` into a variable named `DEPLOYKEY`
+- :type: :leaf
+  :parent: *2
+  :text:
+  - Go to settings>security>deploy keys
+  :parse:
+  - :array:
+    - :styles: []
+      :text: Go to settings>security>deploy keys
+      :start: 0
+      :end: 34
+    :rawparse: []
+    :rawtext: Go to settings>security>deploy keys
+- :type: :leaf
+  :parent: *2
+  :text:
+  - Click on create new deploy key and copy the contents of `deploykey.pub` into the
+    textbox and check "Allow Write Access"
+  :parse:
+  - :array:
+    - :styles: []
+      :text: 'Click on create new deploy key and copy the contents of '
+      :start: 0
+      :end: 57
+    - :styles:
+      - :code
+      :text: deploykey.pub
+      :start: 57
+      :end: 69
+    - :styles: []
+      :text: ' into the textbox and check "Allow Write Access"'
+      :start: 69
+      :end: 118
+    :rawparse:
+    - :tag: :code
+      :start: 57
+      :end: 69
+    :rawtext: Click on create new deploy key and copy the contents of `deploykey.pub`
+      into the textbox and check "Allow Write Access"
+- :type: :leaf
+  :parent: *2
+  :text:
+  - Create a `gh-pages` branch in your project and push it.
+  :parse:
+  - :array:
+    - :styles: []
+      :text: 'Create a '
+      :start: 0
+      :end: 10
+    - :styles:
+      - :code
+      :text: gh-pages
+      :start: 10
+      :end: 17
+    - :styles: []
+      :text: " branch in your project and push it."
+      :start: 17
+      :end: 54
+    :rawparse:
+    - :tag: :code
+      :start: 10
+      :end: 17
+    :rawtext: Create a `gh-pages` branch in your project and push it.
+- :type: :leaf
+  :parent: *2
+  :text:
+  - Push the files to your main repo
+  :parse:
+  - :array:
+    - :styles: []
+      :text: Push the files to your main repo
+      :start: 0
+      :end: 31
+    :rawparse: []
+    :rawtext: Push the files to your main repo
+
+</pre></li></ol></blockquote>
+  </div>
+</div></blockquote>
+  </div>
+</div></blockquote>
+  </div>
+</div>
+	            </div>
+			</div>
+		</div>
+
+</div>
+
+    <!-- Mainly scripts -->
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery-ui-1.10.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="../js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			asciimath2jax: {
+				delimiters: [['$$$MATH$$$','$$$ENDMATH$$$']]
+			}
+		});
+	</script>
+    <script src="../js/MathJax/MathJax.js?config=AM_HTMLorMML-full" async></script>
+
+
+
+
+    <!-- Custom and plugin javascript -->
+    <script src="../js/weaver.js"></script>
+    
+
+    <script>
+
+
+
+$( document ).ready(function() {
+
+
+
+});
+    </script>
+
+
+
+</body>
+
+</html>
+
