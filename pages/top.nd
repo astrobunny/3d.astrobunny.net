@@ -4,4 +4,14 @@ type: manual
 
 # NiceDoc Template
 
-This is a template NiceDoc project. Simply copy these files to your project, create a gh-pages branch and you are off running.
+This is a template NiceDoc project.
+
+## How to use
+
+1. Copy these files to your project
+2. `ssh-keygen -f deploykey` and create a key with no passphrase (just hit Enter until its all done)
+3. Copy the contents of `deploykey` into a variable named `DEPLOYKEY`
+4. Go to settings>security>deploy keys
+5. Click on create new deploy key and copy the contents of `deploykey.pub` into the textbox and check "Allow Write Access"
+6. Create a `gh-pages` branch in your project and push it.
+7. Push the files to your main repo
