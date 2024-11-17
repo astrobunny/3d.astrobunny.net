@@ -1,7 +1,6 @@
 name: nicedoc
 jobs:
-  deploy:
-    needs: [nicedoc]
+  nicedoc-deploy:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
