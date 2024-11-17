@@ -167,6 +167,15 @@ info: ---
   - 5
   - 6
   - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+- :type: :leaf
+  :parent: *1
+  :text:
+  - Check out [[https://github.com/davidsiaw/nicedoc-template]]
 - :type: :leaf
   :parent: *1
   :text:
@@ -176,6 +185,10 @@ info: ---
   :text:
   - "`ssh-keygen -f deploykey` and create a key with no passphrase (just hit Enter
     until its all done)"
+- :type: :leaf
+  :parent: *1
+  :text:
+  - Go to Actions Secrets in your repo
 - :type: :leaf
   :parent: *1
   :text:
@@ -196,6 +209,18 @@ info: ---
 - :type: :leaf
   :parent: *1
   :text:
+  - "`ssh-keygen -f signingkey`"
+- :type: :leaf
+  :parent: *1
+  :text:
+  - Go to Actions Secrets in your repo
+- :type: :leaf
+  :parent: *1
+  :text:
+  - Copy the contents of `signingkey` into a variable named `SIGNINGKEY`
+- :type: :leaf
+  :parent: *1
+  :text:
   - Push the files to your main repo
 :last: *1
 
@@ -212,6 +237,11 @@ parse: ---
   - 5
   - 6
   - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
 - :type: :leaf
   :parent: &2
     :type: :branch
@@ -219,6 +249,26 @@ parse: ---
     :level: 0
     :tag: :ol
     :children: *1
+  :text:
+  - Check out [[https://github.com/davidsiaw/nicedoc-template]]
+  :parse:
+  - :array:
+    - :styles: []
+      :text: 'Check out '
+      :start: 0
+      :end: 12
+    - :styles:
+      - :dblsquare
+      :text: https://github.com/davidsiaw/nicedoc-template
+      :start: 12
+      :end: 56
+    :rawparse:
+    - :tag: :dblsquare
+      :start: 12
+      :end: 56
+    :rawtext: Check out [[https://github.com/davidsiaw/nicedoc-template]]
+- :type: :leaf
+  :parent: *2
   :text:
   - Copy these files to your project
   :parse:
@@ -259,6 +309,18 @@ parse: ---
       :end: 95
     :rawtext: "`ssh-keygen -f deploykey` and create a key with no passphrase (just
       hit Enter until its all done)"
+- :type: :leaf
+  :parent: *2
+  :text:
+  - Go to Actions Secrets in your repo
+  :parse:
+  - :array:
+    - :styles: []
+      :text: Go to Actions Secrets in your repo
+      :start: 0
+      :end: 33
+    :rawparse: []
+    :rawtext: Go to Actions Secrets in your repo
 - :type: :leaf
   :parent: *2
   :text:
@@ -353,6 +415,66 @@ parse: ---
       :start: 10
       :end: 17
     :rawtext: Create a `gh-pages` branch in your project and push it.
+- :type: :leaf
+  :parent: *2
+  :text:
+  - "`ssh-keygen -f signingkey`"
+  :parse:
+  - :array:
+    - :styles:
+      - :code
+      :text: ssh-keygen -f signingkey
+      :start: 1
+      :end: 24
+    :rawparse:
+    - :tag: :code
+      :start: 1
+      :end: 24
+    :rawtext: "`ssh-keygen -f signingkey`"
+- :type: :leaf
+  :parent: *2
+  :text:
+  - Go to Actions Secrets in your repo
+  :parse:
+  - :array:
+    - :styles: []
+      :text: Go to Actions Secrets in your repo
+      :start: 0
+      :end: 33
+    :rawparse: []
+    :rawtext: Go to Actions Secrets in your repo
+- :type: :leaf
+  :parent: *2
+  :text:
+  - Copy the contents of `signingkey` into a variable named `SIGNINGKEY`
+  :parse:
+  - :array:
+    - :styles: []
+      :text: 'Copy the contents of '
+      :start: 0
+      :end: 22
+    - :styles:
+      - :code
+      :text: signingkey
+      :start: 22
+      :end: 31
+    - :styles: []
+      :text: " into a variable named "
+      :start: 31
+      :end: 57
+    - :styles:
+      - :code
+      :text: SIGNINGKEY
+      :start: 57
+      :end: 66
+    :rawparse:
+    - :tag: :code
+      :start: 22
+      :end: 31
+    - :tag: :code
+      :start: 57
+      :end: 66
+    :rawtext: Copy the contents of `signingkey` into a variable named `SIGNINGKEY`
 - :type: :leaf
   :parent: *2
   :text:
