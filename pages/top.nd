@@ -8,10 +8,15 @@ This is a template NiceDoc project.
 
 ## How to use
 
-1. Copy these files to your project
-2. `ssh-keygen -f deploykey` and create a key with no passphrase (just hit Enter until its all done)
-3. Copy the contents of `deploykey` into a variable named `DEPLOYKEY`
-4. Go to settings>security>deploy keys
-5. Click on create new deploy key and copy the contents of `deploykey.pub` into the textbox and check "Allow Write Access"
-6. Create a `gh-pages` branch in your project and push it.
-7. Push the files to your main repo
+1. Check out [[https://github.com/davidsiaw/nicedoc-template]]
+2. Copy these files to your project
+3. `ssh-keygen -f deploykey` and create a key with no passphrase (just hit Enter until its all done)
+4. Go to Actions Secrets in your repo
+4. Copy the contents of `deploykey` into a variable named `DEPLOYKEY`
+5. Go to settings>security>deploy keys
+6. Click on create new deploy key and copy the contents of `deploykey.pub` into the textbox and check "Allow Write Access"
+7. Create a `gh-pages` branch in your project and push it.
+8. `ssh-keygen -f signingkey`
+4. Go to Actions Secrets in your repo
+4. Copy the contents of `signingkey` into a variable named `SIGNINGKEY`
+8. Push the files to your main repo

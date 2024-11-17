@@ -8,14 +8,17 @@ jobs:
       with:
           ssh-private-key: ${{ secrets.DEPLOYKEY }}
     - name: push master
+      env:
+        AUTHOR_NAME: davidsiaw(ghactions)
+        AUTHOR_EMAIL: 874280+davidsiaw@users.noreply.github.com
+        DOMAIN_NAME: template.nicedoc.astrobunny.net
       run: |-
-        git config --global user.name "davidsiaw(ghactions)"
-        git config --global user.email "874280+davidsiaw@users.noreply.github.com"
+        git config --global user.name "$AUTHOR_NAME"
+        git config --global user.email "$AUTHOR_EMAIL"
         git config --global gpg.format ssh
         git config --global commit.gpgsign true
-        echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILPkbTvYV97KFF/QO98ni0GoFx91lDR1uxXcBqok1CjU davidsiaw@debiddonoMacBook-Pro-2.local" > signingkey
-        chmod 600 signingkey
-        git config --global user.signingkey $PWD/signingkey
+        chmod 600 signingkey.pub
+        git config --global user.signingkey $PWD/signingkey.pub
         sh deploy.sh
 
 'on':
