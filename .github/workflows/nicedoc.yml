@@ -12,12 +12,14 @@ jobs:
         AUTHOR_NAME: davidsiaw(ghactions)
         AUTHOR_EMAIL: 874280+davidsiaw@users.noreply.github.com
         DOMAIN_NAME: template.nicedoc.astrobunny.net
+        SIGNING_KEY:  ${{ secrets.SIGNINGKEY }}
       run: |-
         git config --global user.name "$AUTHOR_NAME"
         git config --global user.email "$AUTHOR_EMAIL"
         git config --global gpg.format ssh
         git config --global commit.gpgsign true
-        chmod 600 signingkey.pub
+        echo $SIGNING_KEY > signingkey
+        chmod 600 signingkey
         git config --global user.signingkey $PWD/signingkey.pub
         sh deploy.sh
 
