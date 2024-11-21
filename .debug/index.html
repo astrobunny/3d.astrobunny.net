@@ -17,7 +17,7 @@
 
     <link href="../css/animate.css" rel="stylesheet">
 
-    <link href="../css/indigo-manual.css" rel="stylesheet">
+    <link href="../css/indigo-blog.css" rel="stylesheet">
 
 
 
@@ -68,19 +68,19 @@ info: --- {}
 parse: ---
 - :array:
   - :styles: []
-    :text: NiceDoc Template
+    :text: Astrobunny's 3D and Hardware Site
     :start: 0
-    :end: 15
+    :end: 32
   :rawparse: []
-  :rawtext: NiceDoc Template
+  :rawtext: Astrobunny's 3D and Hardware Site
 
-> NiceDoc Template
+> Astrobunny's 3D and Hardware Site
 </pre></li></ol><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <pre>section
 type: para
 headerlevel: 0
 listlevel: 0
-blocks 3
+blocks 6
 </pre><blockquote><ol><li><pre>block
 tag: div
 type: empty
@@ -100,13 +100,26 @@ info: --- {}
 parse: ---
 - :array:
   - :styles: []
-    :text: This is a template NiceDoc project.
+    :text: 'This is a site dedicated to 3D Printing and other Hardware '
     :start: 0
-    :end: 34
-  :rawparse: []
-  :rawtext: This is a template NiceDoc project.
+    :end: 61
+  - :styles:
+    - :strikethrough
+    :text: Engineering
+    :start: 61
+    :end: 71
+  - :styles: []
+    :text: " fooling around."
+    :start: 71
+    :end: 89
+  :rawparse:
+  - :tag: :strikethrough
+    :start: 61
+    :end: 71
+  :rawtext: This is a site dedicated to 3D Printing and other Hardware --Engineering--
+    fooling around.
 
-> This is a template NiceDoc project.
+> This is a site dedicated to 3D Printing and other Hardware --Engineering-- fooling around.
 </pre></li><li><pre>block
 tag: div
 type: empty
@@ -116,381 +129,105 @@ info: --- {}
 
 parse: --- []
 
-</pre></li></ol></blockquote>
-  </div>
-</div><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <pre>section
-type: header
-headerlevel: 2
-listlevel: 0
-blocks 1
-</pre><blockquote><ol><li><pre>block
-tag: header
-type: single
-level: 2
+</pre></li><li><pre>block
+tag: div
+type: implicit
+level: 0
 lines: 1
 info: --- {}
 
 parse: ---
 - :array:
   - :styles: []
-    :text: How to use
+    :text: 'You can find Hardware work in '
     :start: 0
-    :end: 9
-  :rawparse: []
-  :rawtext: How to use
+    :end: 32
+  - :styles:
+    - :dblsquare
+    :text: hardware
+    :start: 32
+    :end: 39
+  - :styles: []
+    :text: " and Electronics work in "
+    :start: 39
+    :end: 69
+  - :styles:
+    - :dblsquare
+    :text: elec
+    :start: 69
+    :end: 72
+  - :styles: []
+    :text: " and 3D printing specific stuff in "
+    :start: 72
+    :end: 112
+  - :styles:
+    - :dblsquare
+    :text: 3dprint
+    :start: 112
+    :end: 118
+  - :styles: []
+    :text: "."
+    :start: 118
+    :end: 121
+  :rawparse:
+  - :tag: :dblsquare
+    :start: 32
+    :end: 39
+  - :tag: :dblsquare
+    :start: 69
+    :end: 72
+  - :tag: :dblsquare
+    :start: 112
+    :end: 118
+  :rawtext: You can find Hardware work in [[hardware]] and Electronics work in [[elec]]
+    and 3D printing specific stuff in [[3dprint]].
 
-> How to use
-</pre></li></ol><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <pre>section
-type: para
-headerlevel: 0
-listlevel: 0
-blocks 1
-</pre><blockquote><ol><li><pre>block
-tag: ol
-type: list
+> You can find Hardware work in [[hardware]] and Electronics work in [[elec]] and 3D printing specific stuff in [[3dprint]].
+</pre></li><li><pre>block
+tag: div
+type: empty
 level: 0
 lines: 0
-info: ---
-:tags:
-- &1
-  :type: :branch
-  :parent:
-  :level: 0
-  :tag: :ol
-  :children:
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
-  - 6
-  - 7
-  - 8
-  - 9
-  - 10
-  - 11
-  - 12
-- :type: :leaf
-  :parent: *1
-  :text:
-  - Check out [[https://github.com/davidsiaw/nicedoc-template]]
-- :type: :leaf
-  :parent: *1
-  :text:
-  - Copy these files to your project
-- :type: :leaf
-  :parent: *1
-  :text:
-  - "`ssh-keygen -f deploykey` and create a key with no passphrase (just hit Enter
-    until its all done)"
-- :type: :leaf
-  :parent: *1
-  :text:
-  - Go to Actions Secrets in your repo
-- :type: :leaf
-  :parent: *1
-  :text:
-  - Copy the contents of `deploykey` into a variable named `DEPLOYKEY`
-- :type: :leaf
-  :parent: *1
-  :text:
-  - Go to settings>security>deploy keys
-- :type: :leaf
-  :parent: *1
-  :text:
-  - Click on create new deploy key and copy the contents of `deploykey.pub` into the
-    textbox and check "Allow Write Access"
-- :type: :leaf
-  :parent: *1
-  :text:
-  - Create a `gh-pages` branch in your project and push it.
-- :type: :leaf
-  :parent: *1
-  :text:
-  - "`ssh-keygen -f signingkey`"
-- :type: :leaf
-  :parent: *1
-  :text:
-  - Go to Actions Secrets in your repo
-- :type: :leaf
-  :parent: *1
-  :text:
-  - Copy the contents of `signingkey` into a variable named `SIGNINGKEY`
-- :type: :leaf
-  :parent: *1
-  :text:
-  - Push the files to your main repo
-:last: *1
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: div
+type: implicit
+level: 0
+lines: 1
+info: --- {}
 
 parse: ---
-- :type: :branch
-  :parent:
-  :level: 0
-  :tag: :ol
-  :children: &1
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
-  - 6
-  - 7
-  - 8
-  - 9
-  - 10
-  - 11
-  - 12
-- :type: :leaf
-  :parent: &2
-    :type: :branch
-    :parent:
-    :level: 0
-    :tag: :ol
-    :children: *1
-  :text:
-  - Check out [[https://github.com/davidsiaw/nicedoc-template]]
-  :parse:
-  - :array:
-    - :styles: []
-      :text: 'Check out '
-      :start: 0
-      :end: 12
-    - :styles:
-      - :dblsquare
-      :text: https://github.com/davidsiaw/nicedoc-template
-      :start: 12
-      :end: 56
-    :rawparse:
-    - :tag: :dblsquare
-      :start: 12
-      :end: 56
-    :rawtext: Check out [[https://github.com/davidsiaw/nicedoc-template]]
-- :type: :leaf
-  :parent: *2
-  :text:
-  - Copy these files to your project
-  :parse:
-  - :array:
-    - :styles: []
-      :text: Copy these files to your project
-      :start: 0
-      :end: 31
-    :rawparse: []
-    :rawtext: Copy these files to your project
-- :type: :leaf
-  :parent: *2
-  :text:
-  - "`ssh-keygen -f deploykey` and create a key with no passphrase (just hit Enter
-    until its all done)"
-  :parse:
-  - :array:
-    - :styles:
-      - :code
-      :text: ssh-keygen -f deploykey
-      :start: 1
-      :end: 23
-    - :styles: []
-      :text: " and create a key with no passphrase "
-      :start: 23
-      :end: 63
-    - :styles:
-      - :parens
-      :text: just hit Enter until its all done
-      :start: 63
-      :end: 95
-    :rawparse:
-    - :tag: :code
-      :start: 1
-      :end: 23
-    - :tag: :parens
-      :start: 63
-      :end: 95
-    :rawtext: "`ssh-keygen -f deploykey` and create a key with no passphrase (just
-      hit Enter until its all done)"
-- :type: :leaf
-  :parent: *2
-  :text:
-  - Go to Actions Secrets in your repo
-  :parse:
-  - :array:
-    - :styles: []
-      :text: Go to Actions Secrets in your repo
-      :start: 0
-      :end: 33
-    :rawparse: []
-    :rawtext: Go to Actions Secrets in your repo
-- :type: :leaf
-  :parent: *2
-  :text:
-  - Copy the contents of `deploykey` into a variable named `DEPLOYKEY`
-  :parse:
-  - :array:
-    - :styles: []
-      :text: 'Copy the contents of '
-      :start: 0
-      :end: 22
-    - :styles:
-      - :code
-      :text: deploykey
-      :start: 22
-      :end: 30
-    - :styles: []
-      :text: " into a variable named "
-      :start: 30
-      :end: 56
-    - :styles:
-      - :code
-      :text: DEPLOYKEY
-      :start: 56
-      :end: 64
-    :rawparse:
-    - :tag: :code
-      :start: 22
-      :end: 30
-    - :tag: :code
-      :start: 56
-      :end: 64
-    :rawtext: Copy the contents of `deploykey` into a variable named `DEPLOYKEY`
-- :type: :leaf
-  :parent: *2
-  :text:
-  - Go to settings>security>deploy keys
-  :parse:
-  - :array:
-    - :styles: []
-      :text: Go to settings>security>deploy keys
-      :start: 0
-      :end: 34
-    :rawparse: []
-    :rawtext: Go to settings>security>deploy keys
-- :type: :leaf
-  :parent: *2
-  :text:
-  - Click on create new deploy key and copy the contents of `deploykey.pub` into the
-    textbox and check "Allow Write Access"
-  :parse:
-  - :array:
-    - :styles: []
-      :text: 'Click on create new deploy key and copy the contents of '
-      :start: 0
-      :end: 57
-    - :styles:
-      - :code
-      :text: deploykey.pub
-      :start: 57
-      :end: 69
-    - :styles: []
-      :text: ' into the textbox and check "Allow Write Access"'
-      :start: 69
-      :end: 118
-    :rawparse:
-    - :tag: :code
-      :start: 57
-      :end: 69
-    :rawtext: Click on create new deploy key and copy the contents of `deploykey.pub`
-      into the textbox and check "Allow Write Access"
-- :type: :leaf
-  :parent: *2
-  :text:
-  - Create a `gh-pages` branch in your project and push it.
-  :parse:
-  - :array:
-    - :styles: []
-      :text: 'Create a '
-      :start: 0
-      :end: 10
-    - :styles:
-      - :code
-      :text: gh-pages
-      :start: 10
-      :end: 17
-    - :styles: []
-      :text: " branch in your project and push it."
-      :start: 17
-      :end: 54
-    :rawparse:
-    - :tag: :code
-      :start: 10
-      :end: 17
-    :rawtext: Create a `gh-pages` branch in your project and push it.
-- :type: :leaf
-  :parent: *2
-  :text:
-  - "`ssh-keygen -f signingkey`"
-  :parse:
-  - :array:
-    - :styles:
-      - :code
-      :text: ssh-keygen -f signingkey
-      :start: 1
-      :end: 24
-    :rawparse:
-    - :tag: :code
-      :start: 1
-      :end: 24
-    :rawtext: "`ssh-keygen -f signingkey`"
-- :type: :leaf
-  :parent: *2
-  :text:
-  - Go to Actions Secrets in your repo
-  :parse:
-  - :array:
-    - :styles: []
-      :text: Go to Actions Secrets in your repo
-      :start: 0
-      :end: 33
-    :rawparse: []
-    :rawtext: Go to Actions Secrets in your repo
-- :type: :leaf
-  :parent: *2
-  :text:
-  - Copy the contents of `signingkey` into a variable named `SIGNINGKEY`
-  :parse:
-  - :array:
-    - :styles: []
-      :text: 'Copy the contents of '
-      :start: 0
-      :end: 22
-    - :styles:
-      - :code
-      :text: signingkey
-      :start: 22
-      :end: 31
-    - :styles: []
-      :text: " into a variable named "
-      :start: 31
-      :end: 57
-    - :styles:
-      - :code
-      :text: SIGNINGKEY
-      :start: 57
-      :end: 66
-    :rawparse:
-    - :tag: :code
-      :start: 22
-      :end: 31
-    - :tag: :code
-      :start: 57
-      :end: 66
-    :rawtext: Copy the contents of `signingkey` into a variable named `SIGNINGKEY`
-- :type: :leaf
-  :parent: *2
-  :text:
-  - Push the files to your main repo
-  :parse:
-  - :array:
-    - :styles: []
-      :text: Push the files to your main repo
-      :start: 0
-      :end: 31
-    :rawparse: []
-    :rawtext: Push the files to your main repo
+- :array:
+  - :styles: []
+    :text: 'Software section? Software is so pervasive now that it is basically part
+      of all work regardless of if it is Hardware or Electronics or Mechanics. Rather
+      than have a software section, the software stuff will be in the places where
+      they are mostly used. Pure software work can be found in '
+    :start: 0
+    :end: 289
+  - :styles:
+    - :dblsquare
+    :text: elec
+    :start: 289
+    :end: 292
+  - :styles: []
+    :text: "."
+    :start: 292
+    :end: 295
+  :rawparse:
+  - :tag: :dblsquare
+    :start: 289
+    :end: 292
+  :rawtext: Software section? Software is so pervasive now that it is basically part
+    of all work regardless of if it is Hardware or Electronics or Mechanics. Rather
+    than have a software section, the software stuff will be in the places where they
+    are mostly used. Pure software work can be found in [[elec]].
 
+> Software section? Software is so pervasive now that it is basically part of all work regardless of if it is Hardware or Electronics or Mechanics. Rather than have a software section, the software stuff will be in the places where they are mostly used. Pure software work can be found in [[elec]].
 </pre></li></ol></blockquote>
-  </div>
-</div></blockquote>
   </div>
 </div></blockquote>
   </div>
