@@ -1,0 +1,16 @@
+title: First Post
+type: blog
+---
+
+# First Post
+
+  This is an attempt to start writing down and taking notes. I made a documentation framework to test this but I wanted to actually run a website with it to understand any challenges that may arise and I am already finding them
+
+
+1. Making a blog is kind of a headache, because there are so many features you want such as:
+  a. getting a summary post up
+  b. automatically making summary pages for months or weeks
+  c. search page
+2. Making posts needs to be a simple command line
+
+Need to work on this at some point.

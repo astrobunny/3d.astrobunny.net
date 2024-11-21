@@ -1,6 +1,6 @@
 
 rm -rf build
-git clone git@github.com:davidsiaw/nicedoc-template build
+git clone git@github.com:astrobunny/3d.astrobunny.net build
 cd build
 git checkout gh-pages
 cd ..

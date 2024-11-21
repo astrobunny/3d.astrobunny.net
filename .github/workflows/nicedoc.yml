@@ -1,6 +1,6 @@
-name: nicedoc
+name: deploy
 jobs:
-  nicedoc-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -11,9 +11,9 @@ jobs:
             ${{ secrets.SIGNINGKEY }}
     - name: push master
       env:
-        AUTHOR_NAME: davidsiaw(ghactions)
-        AUTHOR_EMAIL: 874280+davidsiaw@users.noreply.github.com
-        DOMAIN_NAME: template.nicedoc.astrobunny.net
+        AUTHOR_NAME: astrobunny(ghactions)
+        AUTHOR_EMAIL: 29588131+astrobunny@users.noreply.github.com
+        DOMAIN_NAME: 3d.astrobunny.net
       run: |-
         git config --global user.name "$AUTHOR_NAME"
         git config --global user.email "$AUTHOR_EMAIL"

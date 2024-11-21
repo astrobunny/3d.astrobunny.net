@@ -1,3 +1,3 @@
-# NiceDoc Template Repository
+# Source of my website
 
-https://template.nicedoc.astrobunny.net/
+https://3d.astrobunny.net/
