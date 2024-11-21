@@ -17,7 +17,7 @@
 
     <link href="../css/animate.css" rel="stylesheet">
 
-    <link href="../css/indigo-blog.css" rel="stylesheet">
+    <link href="../css/indigo-opinion.css" rel="stylesheet">
 
 
 
@@ -80,8 +80,62 @@ parse: ---
 type: para
 headerlevel: 0
 listlevel: 0
-blocks 2
+blocks 4
 </pre><blockquote><ol><li><pre>block
+tag: ul
+type: list
+level: 0
+lines: 0
+info: ---
+:tags:
+- &1
+  :type: :branch
+  :parent:
+  :level: 0
+  :tag: :ul
+  :children:
+  - 1
+- :type: :leaf
+  :parent: *1
+  :text:
+  - This is a site dedicated to 3D Printing.
+:last: *1
+
+parse: ---
+- :type: :branch
+  :parent:
+  :level: 0
+  :tag: :ul
+  :children: &1
+  - 1
+- :type: :leaf
+  :parent:
+    :type: :branch
+    :parent:
+    :level: 0
+    :tag: :ul
+    :children: *1
+  :text:
+  - This is a site dedicated to 3D Printing.
+  :parse:
+  - :array:
+    - :styles: []
+      :text: This is a site dedicated to 3D Printing.
+      :start: 0
+      :end: 39
+    :rawparse: []
+    :rawtext: This is a site dedicated to 3D Printing.
+
+</pre></li><li><pre>block
+tag: div
+type: break
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
 tag: div
 type: empty
 level: 0
@@ -91,7 +145,7 @@ info: --- {}
 parse: --- []
 
 </pre></li><li><pre>block
-tag: div
+tag: p
 type: implicit
 level: 0
 lines: 1
@@ -100,13 +154,19 @@ info: --- {}
 parse: ---
 - :array:
   - :styles: []
-    :text: This is a site dedicated to 3D Printing
+    :text: Usually this would be filed under hardware but I mostly do all the other
+      hardware and electronics for 3D Printing and the 3D printing community is super
+      lively at the moment and there are tonnes of stuff to iron out and new things
+      to learn, so that warrants its whole own category.
     :start: 0
-    :end: 38
+    :end: 280
   :rawparse: []
-  :rawtext: This is a site dedicated to 3D Printing
+  :rawtext: Usually this would be filed under hardware but I mostly do all the other
+    hardware and electronics for 3D Printing and the 3D printing community is super
+    lively at the moment and there are tonnes of stuff to iron out and new things
+    to learn, so that warrants its whole own category.
 
-> This is a site dedicated to 3D Printing
+> Usually this would be filed under hardware but I mostly do all the other hardware and electronics for 3D Printing and the 3D printing community is super lively at the moment and there are tonnes of stuff to iron out and new things to learn, so that warrants its whole own category.
 </pre></li></ol></blockquote>
   </div>
 </div></blockquote>
