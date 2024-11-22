@@ -1,0 +1,20 @@
+title: Klipper UART
+type: manual
+---
+
+# Klipper UART
+
+Connect to klipper using uart.
+Connect TX RX on mcu to RX TX on RPI
+Make sure to connect a ground pin to the ground pin on SPI too
+
+```
+make menuconfig
+```
+
+
+```YAML
+[mcu]
+serial: /dev/ttyS0 # or /dev/ttyAMA0
+restart: command
+```
