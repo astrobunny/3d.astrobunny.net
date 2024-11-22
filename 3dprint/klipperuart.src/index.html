@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>source of /app/pages/elec/rpiusbether.nd</title>
+    <title>source of /app/pages/3dprint/klipperuart.nd</title>
 
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -35,14 +35,26 @@
         <div id="wrapper">
 	        <div class="wrapper-content">
 	            <div class="container">
-<div class="row"><full><pre class="wrapped">title: RPI USB Ether
-type: article
+<div class="row"><full><pre class="wrapped">title: Klipper UART
+type: manual
 ---
 
-# Raspberry Pi USB Ethernet Gadget
+# Klipper UART
 
-How to get this working
+Connect to klipper using uart.
+Connect TX RX on mcu to RX TX on RPI
+Make sure to connect a ground pin to the ground pin on SPI too
 
+```
+make menuconfig
+```
+
+
+```YAML
+[mcu]
+serial: /dev/ttyS0 # or /dev/ttyAMA0
+restart: command
+```
 </pre></full></div>
 	            </div>
 			</div>
