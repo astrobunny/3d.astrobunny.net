@@ -1,10 +1,15 @@
 title: RPI TFT
-type: article
+type: blog
 ---
 
 # Raspberry Pi TFT
 
 These are notes on getting a TFT screen to work on a Raspberry Pi
 
+- types
+  - ili9488
 - pins
+  - do not connect screen MISO
 - software
+  - dtoverlay
+  - drm

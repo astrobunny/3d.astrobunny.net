@@ -1,0 +1,22 @@
+title: Protoboard
+type: blog
+
+---
+
+# Protoboard
+
+Notes on prototype board
+
+- pins
+- has a wide set of pins in the middle for 40-pin dev boards to be placed on.
+
+- compatibiltiy
+
+what to improve
+- does not work with tang nano dev boards that have 26 pins on each side. maybe need to expand
+
+I can use it like this tho:
+
+```image
+src: protoboard/tangnano.jpg
+```

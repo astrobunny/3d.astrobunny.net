@@ -1,8 +1,10 @@
 title: RPI USB Ether
-type: article
+type: blog
 ---
 
 # Raspberry Pi USB Ethernet Gadget
 
 How to get this working
 
+- dwc2
+- g_ether
