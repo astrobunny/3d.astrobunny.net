@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Micron Mask</title>
+    <title>Dragonburner Logo Mask</title>
 
     <link href="../../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../../font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -17,7 +17,7 @@
 
     <link href="../../../css/animate.css" rel="stylesheet">
 
-    <link href="../../../css/indigo-blog.css" rel="stylesheet">
+    <link href="../../../css/indigo-manual.css" rel="stylesheet">
 
 
 
@@ -68,19 +68,230 @@ info: --- {}
 parse: ---
 - :array:
   - :styles: []
-    :text: Micron Mask
+    :text: Dragonburner Logo Mask for Micron
     :start: 0
-    :end: 10
+    :end: 32
   :rawparse: []
-  :rawtext: Micron Mask
+  :rawtext: Dragonburner Logo Mask for Micron
 
-> Micron Mask
+> Dragonburner Logo Mask for Micron
 </pre></li></ol><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <pre>section
 type: para
 headerlevel: 0
 listlevel: 0
-blocks 2
+blocks 7
+</pre><blockquote><ol><li><pre>block
+tag: div
+type: empty
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: p
+type: implicit
+level: 0
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: This is a combined mask-diffuser for the dragonburner. It is based on the
+      one in the Dragonburner repo.
+    :start: 0
+    :end: 102
+  :rawparse: []
+  :rawtext: This is a combined mask-diffuser for the dragonburner. It is based on
+    the one in the Dragonburner repo.
+
+> This is a combined mask-diffuser for the dragonburner. It is based on the one in the Dragonburner repo.
+</pre></li><li><pre>block
+tag: div
+type: empty
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: p
+type: implicit
+level: 0
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: 'This diffuser is modified to have a mask behind the Micron logo, to reduce
+      light leakage. In order to print it you will need:'
+    :start: 0
+    :end: 124
+  :rawparse: []
+  :rawtext: 'This diffuser is modified to have a mask behind the Micron logo, to reduce
+    light leakage. In order to print it you will need:'
+
+> This diffuser is modified to have a mask behind the Micron logo, to reduce light leakage. In order to print it you will need:
+</pre></li><li><pre>block
+tag: ol
+type: list
+level: 0
+lines: 0
+info: ---
+:tags:
+- &1
+  :type: :branch
+  :parent:
+  :level: 0
+  :tag: :ol
+  :children:
+  - 1
+  - 2
+- :type: :leaf
+  :parent: *1
+  :text:
+  - A *clear* filament and *black* filament of ABS or PETG.
+- :type: :leaf
+  :parent: *1
+  :text:
+  - Both clear and black filaments need to be the same material, since otherwise they
+    will not stick to each other. (I have not tested with different types but maybe
+    they will work for you).
+:last: *1
+
+parse: ---
+- :type: :branch
+  :parent:
+  :level: 0
+  :tag: :ol
+  :children: &1
+  - 1
+  - 2
+- :type: :leaf
+  :parent: &2
+    :type: :branch
+    :parent:
+    :level: 0
+    :tag: :ol
+    :children: *1
+  :text:
+  - A *clear* filament and *black* filament of ABS or PETG.
+  :parse:
+  - :array:
+    - :styles: []
+      :text: 'A '
+      :start: 0
+      :end: 3
+    - :styles:
+      - :bold
+      :text: clear
+      :start: 3
+      :end: 7
+    - :styles: []
+      :text: " filament and "
+      :start: 7
+      :end: 24
+    - :styles:
+      - :bold
+      :text: black
+      :start: 24
+      :end: 28
+    - :styles: []
+      :text: " filament of ABS or PETG."
+      :start: 28
+      :end: 54
+    :rawparse:
+    - :tag: :bold
+      :start: 3
+      :end: 7
+    - :tag: :bold
+      :start: 24
+      :end: 28
+    :rawtext: A *clear* filament and *black* filament of ABS or PETG.
+- :type: :leaf
+  :parent: *2
+  :text:
+  - Both clear and black filaments need to be the same material, since otherwise they
+    will not stick to each other. (I have not tested with different types but maybe
+    they will work for you).
+  :parse:
+  - :array:
+    - :styles: []
+      :text: 'Both clear and black filaments need to be the same material, since otherwise
+        they will not stick to each other. '
+      :start: 0
+      :end: 113
+    - :styles:
+      - :parens
+      :text: I have not tested with different types but maybe they will work for you
+      :start: 113
+      :end: 183
+    - :styles: []
+      :text: "."
+      :start: 183
+      :end: 185
+    :rawparse:
+    - :tag: :parens
+      :start: 113
+      :end: 183
+    :rawtext: Both clear and black filaments need to be the same material, since otherwise
+      they will not stick to each other. (I have not tested with different types but
+      maybe they will work for you).
+
+</pre></li><li><pre>block
+tag: div
+type: break
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: div
+type: empty
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li></ol></blockquote>
+  </div>
+</div><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <pre>section
+type: header
+headerlevel: 2
+listlevel: 0
+blocks 1
+</pre><blockquote><ol><li><pre>block
+tag: header
+type: single
+level: 2
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: How to print
+    :start: 0
+    :end: 11
+  :rawparse: []
+  :rawtext: How to print
+
+> How to print
+</pre></li></ol><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <pre>section
+type: para
+headerlevel: 0
+listlevel: 0
+blocks 4
 </pre><blockquote><ol><li><pre>block
 tag: div
 type: empty
@@ -100,14 +311,253 @@ info: --- {}
 parse: ---
 - :array:
   - :styles: []
-    :text: Put in micron mask
+    :text: Simply need to go to your slicer and insert a pause at the first layer
+      above the logo hole. Start the print with the black filament, and then at the
+      pause, change to clear filament, and remember to purge out all the black before
+      you resume. You do not need supports
     :start: 0
-    :end: 17
+    :end: 264
   :rawparse: []
-  :rawtext: Put in micron mask
+  :rawtext: Simply need to go to your slicer and insert a pause at the first layer
+    above the logo hole. Start the print with the black filament, and then at the
+    pause, change to clear filament, and remember to purge out all the black before
+    you resume. You do not need supports
 
-> Put in micron mask
+> Simply need to go to your slicer and insert a pause at the first layer above the logo hole. Start the print with the black filament, and then at the pause, change to clear filament, and remember to purge out all the black before you resume. You do not need supports
+</pre></li><li><pre>block
+tag: div
+type: break
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: div
+type: implicit
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
 </pre></li></ol></blockquote>
+  </div>
+</div></blockquote>
+  </div>
+</div><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <pre>section
+type: header
+headerlevel: 2
+listlevel: 0
+blocks 1
+</pre><blockquote><ol><li><pre>block
+tag: header
+type: single
+level: 2
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: Links
+    :start: 0
+    :end: 4
+  :rawparse: []
+  :rawtext: Links
+
+> Links
+</pre></li></ol><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <pre>section
+type: para
+headerlevel: 0
+listlevel: 0
+blocks 6
+</pre><blockquote><ol><li><pre>block
+tag: div
+type: empty
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: div
+type: implicit
+level: 0
+lines: 2
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: 'STL is here:'
+    :start: 0
+    :end: 11
+  :rawparse: []
+  :rawtext: 'STL is here:'
+- :array:
+  - :styles:
+    - :dblsquare
+    :text: https://github.com/astrobunny/voron-mods/blob/master/micron/STL/masked-diffuser-dragonburner.stl
+    :start: 2
+    :end: 97
+  :rawparse:
+  - :tag: :dblsquare
+    :start: 2
+    :end: 97
+  :rawtext: "[[https://github.com/astrobunny/voron-mods/blob/master/micron/STL/masked-diffuser-dragonburner.stl]]"
+
+> STL is here:
+> [[https://github.com/astrobunny/voron-mods/blob/master/micron/STL/masked-diffuser-dragonburner.stl]]
+</pre></li><li><pre>block
+tag: div
+type: break
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: div
+type: implicit
+level: 0
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: I recommend printing with a 0.1 layer height and 0.2 for the first layer,
+      and with all other voron part settings. But go ahead and do whatever you are
+      comfortable with.
+    :start: 0
+    :end: 167
+  :rawparse: []
+  :rawtext: I recommend printing with a 0.1 layer height and 0.2 for the first layer,
+    and with all other voron part settings. But go ahead and do whatever you are comfortable
+    with.
+
+> I recommend printing with a 0.1 layer height and 0.2 for the first layer, and with all other voron part settings. But go ahead and do whatever you are comfortable with.
+</pre></li><li><pre>block
+tag: div
+type: break
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: div
+type: implicit
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li></ol></blockquote>
+  </div>
+</div></blockquote>
+  </div>
+</div><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <pre>section
+type: header
+headerlevel: 2
+listlevel: 0
+blocks 1
+</pre><blockquote><ol><li><pre>block
+tag: header
+type: single
+level: 2
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: Pictures
+    :start: 0
+    :end: 7
+  :rawparse: []
+  :rawtext: Pictures
+
+> Pictures
+</pre></li></ol><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <pre>section
+type: para
+headerlevel: 0
+listlevel: 0
+blocks 3
+</pre><blockquote><ol><li><pre>block
+tag: div
+type: explicit
+level: 0
+lines: 2
+info: ---
+:spec: image
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: 'src: dragonburner-diffuser/front.png'
+    :start: 0
+    :end: 35
+  :rawparse: []
+  :rawtext: 'src: dragonburner-diffuser/front.png'
+- :array:
+  - :styles: []
+    :text: 'alt: Front'
+    :start: 0
+    :end: 9
+  :rawparse: []
+  :rawtext: 'alt: Front'
+
+> src: dragonburner-diffuser/front.png
+> alt: Front
+</pre></li><li><pre>block
+tag: div
+type: break
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: div
+type: explicit
+level: 0
+lines: 2
+info: ---
+:spec: image
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: 'src: dragonburner-diffuser/back.png'
+    :start: 0
+    :end: 34
+  :rawparse: []
+  :rawtext: 'src: dragonburner-diffuser/back.png'
+- :array:
+  - :styles: []
+    :text: 'alt: Back'
+    :start: 0
+    :end: 8
+  :rawparse: []
+  :rawtext: 'alt: Back'
+
+> src: dragonburner-diffuser/back.png
+> alt: Back
+</pre></li></ol></blockquote>
+  </div>
+</div></blockquote>
   </div>
 </div></blockquote>
   </div>

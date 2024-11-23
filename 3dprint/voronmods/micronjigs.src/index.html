@@ -36,13 +36,63 @@
 	        <div class="wrapper-content">
 	            <div class="container">
 <div class="row"><full><pre class="wrapped">title: Micron Jigs
-type: blog
+type: manual
 ---
 
 # Micron Jigs
 
-Put in micron jigs
-</pre></full></div>
+For building the Micron 180mm
+
+I made a new set of Jigs to align the X, Y and Z rails on the Micron 180mm extrusions. These worked better for me.
+
+## Motivation
+
+### X and Y rails
+
+  The X original jigs only aligned it vertically for you but not horizontally. The [Y original jig](https://github.com/PrintersForAnts/Micron/blob/main/STLs/Tools/micron_y_rail_alignment_tool_x2.stl) was good but did not work for the 180mm Micron. These are improved jigs that let you do alignment completely by themselves, by just pushing them against the ends of the extrusions and placing the rail in the space between them.  Print two of each
+
+### Z-jig Z rail spacing
+
+  The Z jig had the correct length but its tiny arms meant that you needed to either have the L extrusion already there or a 90 degree block to keep it steady. The new Z-jig allows you to press on one side of the extrusion to get the 36mm spacing just right, and can also align the rail laterally on the extrusion when used vertically.
+
+  You can also choose to use the [old Z jigs](https://github.com/PrintersForAnts/Micron/blob/main/STLs/Tools/micron_key_rail_alignment_tool_x2.stl) if you wish to put on the Z-rails *after* you build the frame. I designed mine so that they can be done before frame construction.
+
+## Settings
+
+Slice with the voron part settings: 0.2mm layer height and 40% infill.
+
+They should print well on no shrinkage compensation and will be slightly loose with a little play if you have shrinkage compensation set up.
+
+## Links
+
+You can find the STLs in the Micron repo, as they have been merged in.
+
+- [[https://github.com/PrintersForAnts/Micron/blob/main/STLs/Tools/x-rail-jig-x2.stl]]
+- [[https://github.com/PrintersForAnts/Micron/blob/main/STLs/Tools/y-rail-tool-180mm-x2.stl]]
+- [[https://github.com/PrintersForAnts/Micron/blob/main/STLs/Tools/z-rail-jig-x2.stl]]
+
+## Pictures
+
+### X and Y Rail Jigs
+
+```image
+src: micron-jigs/xy-jigs.avif
+alt: X and Y rails
+```
+
+### Z-jig
+
+```image
+src: micron-jigs/z-jig.webp
+alt: Z Jig for aligning from the end of the extrusion
+```
+
+### Z-jig Lateral
+
+```image
+src: micron-jigs/z-jig-standing.webp
+alt: Z Jig for aligning laterally
+```</pre></full></div>
 	            </div>
 			</div>
 		</div>

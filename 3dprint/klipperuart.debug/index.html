@@ -80,7 +80,7 @@ parse: ---
 type: para
 headerlevel: 0
 listlevel: 0
-blocks 5
+blocks 3
 </pre><blockquote><ol><li><pre>block
 tag: div
 type: empty
@@ -94,35 +94,966 @@ parse: --- []
 tag: div
 type: implicit
 level: 0
-lines: 3
+lines: 1
 info: --- {}
 
 parse: ---
 - :array:
   - :styles: []
-    :text: Connect to klipper using uart.
+    :text: These are some notes on setting up Klipper on your Raspberry Pi to talk
+      to your MCU, whether it be a Manta or SKR or whatever over UART rather than
+      USB. This can be useful when you are using something like a Raspberry Pi Zero
+      that only has one USB port for data that you would like to reserve for debugging.
     :start: 0
-    :end: 29
+    :end: 306
   :rawparse: []
-  :rawtext: Connect to klipper using uart.
-- :array:
-  - :styles: []
-    :text: Connect TX RX on mcu to RX TX on RPI
-    :start: 0
-    :end: 35
-  :rawparse: []
-  :rawtext: Connect TX RX on mcu to RX TX on RPI
-- :array:
-  - :styles: []
-    :text: Make sure to connect a ground pin to the ground pin on SPI too
-    :start: 0
-    :end: 61
-  :rawparse: []
-  :rawtext: Make sure to connect a ground pin to the ground pin on SPI too
+  :rawtext: These are some notes on setting up Klipper on your Raspberry Pi to talk
+    to your MCU, whether it be a Manta or SKR or whatever over UART rather than USB.
+    This can be useful when you are using something like a Raspberry Pi Zero that
+    only has one USB port for data that you would like to reserve for debugging.
 
-> Connect to klipper using uart.
-> Connect TX RX on mcu to RX TX on RPI
-> Make sure to connect a ground pin to the ground pin on SPI too
+> These are some notes on setting up Klipper on your Raspberry Pi to talk to your MCU, whether it be a Manta or SKR or whatever over UART rather than USB. This can be useful when you are using something like a Raspberry Pi Zero that only has one USB port for data that you would like to reserve for debugging.
+</pre></li><li><pre>block
+tag: div
+type: empty
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li></ol></blockquote>
+  </div>
+</div><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <pre>section
+type: header
+headerlevel: 2
+listlevel: 0
+blocks 1
+</pre><blockquote><ol><li><pre>block
+tag: header
+type: single
+level: 2
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: Physical Wiring
+    :start: 0
+    :end: 14
+  :rawparse: []
+  :rawtext: Physical Wiring
+
+> Physical Wiring
+</pre></li></ol><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <pre>section
+type: para
+headerlevel: 0
+listlevel: 0
+blocks 17
+</pre><blockquote><ol><li><pre>block
+tag: div
+type: empty
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: div
+type: implicit
+level: 0
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: 'Refer to the image below:'
+    :start: 0
+    :end: 24
+  :rawparse: []
+  :rawtext: 'Refer to the image below:'
+
+> Refer to the image below:
+</pre></li><li><pre>block
+tag: div
+type: explicit
+level: 0
+lines: 2
+info: ---
+:spec: image
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: 'src: klipperuart/kuartconnection.webp'
+    :start: 0
+    :end: 36
+  :rawparse: []
+  :rawtext: 'src: klipperuart/kuartconnection.webp'
+- :array:
+  - :styles: []
+    :text: 'alt: Wiring'
+    :start: 0
+    :end: 10
+  :rawparse: []
+  :rawtext: 'alt: Wiring'
+
+> src: klipperuart/kuartconnection.webp
+> alt: Wiring
+</pre></li><li><pre>block
+tag: div
+type: empty
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: div
+type: implicit
+level: 0
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: 'In this image I used a green blue and black wire to do this between a
+      Raspberry Pi Zero and an SKR 1.4. The wires are:'
+    :start: 0
+    :end: 117
+  :rawparse: []
+  :rawtext: 'In this image I used a green blue and black wire to do this between a
+    Raspberry Pi Zero and an SKR 1.4. The wires are:'
+
+> In this image I used a green blue and black wire to do this between a Raspberry Pi Zero and an SKR 1.4. The wires are:
+</pre></li><li><pre>block
+tag: ul
+type: list
+level: 0
+lines: 0
+info: ---
+:tags:
+- &1
+  :type: :branch
+  :parent:
+  :level: 0
+  :tag: :ul
+  :children:
+  - 1
+  - 2
+  - 3
+- :type: :leaf
+  :parent: *1
+  :text:
+  - Black for Ground
+- :type: :leaf
+  :parent: *1
+  :text:
+  - Green for RX on the SKR 1.4 and TX on the Raspberry Pi
+- :type: :leaf
+  :parent: *1
+  :text:
+  - Blue for TX on the SKR 1.4 and RX on the Raspberry Pi
+:last: *1
+
+parse: ---
+- :type: :branch
+  :parent:
+  :level: 0
+  :tag: :ul
+  :children: &1
+  - 1
+  - 2
+  - 3
+- :type: :leaf
+  :parent: &2
+    :type: :branch
+    :parent:
+    :level: 0
+    :tag: :ul
+    :children: *1
+  :text:
+  - Black for Ground
+  :parse:
+  - :array:
+    - :styles: []
+      :text: Black for Ground
+      :start: 0
+      :end: 15
+    :rawparse: []
+    :rawtext: Black for Ground
+- :type: :leaf
+  :parent: *2
+  :text:
+  - Green for RX on the SKR 1.4 and TX on the Raspberry Pi
+  :parse:
+  - :array:
+    - :styles: []
+      :text: Green for RX on the SKR 1.4 and TX on the Raspberry Pi
+      :start: 0
+      :end: 53
+    :rawparse: []
+    :rawtext: Green for RX on the SKR 1.4 and TX on the Raspberry Pi
+- :type: :leaf
+  :parent: *2
+  :text:
+  - Blue for TX on the SKR 1.4 and RX on the Raspberry Pi
+  :parse:
+  - :array:
+    - :styles: []
+      :text: Blue for TX on the SKR 1.4 and RX on the Raspberry Pi
+      :start: 0
+      :end: 52
+    :rawparse: []
+    :rawtext: Blue for TX on the SKR 1.4 and RX on the Raspberry Pi
+
+</pre></li><li><pre>block
+tag: div
+type: break
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: div
+type: implicit
+level: 0
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: 'I used the pins labelled TFT in the '
+    :start: 0
+    :end: 37
+  - :styles:
+    - :square
+    :text: SKR 1.4 Pin diagram
+    :start: 37
+    :end: 55
+  - :styles:
+    - :parens
+    :text: https:/
+    :start: 58
+    :end: 64
+  - :styles:
+    - :parens
+    - :italics
+    :text: "/github.com"
+    :start: 65
+    :end: 77
+  - :styles:
+    - :parens
+    - :italics
+    - :italics
+    :text: bigtreetech
+    :start: 77
+    :end: 87
+  - :styles:
+    - :parens
+    :text: BIGTREETECH-SKR-V1.3
+    :start: 87
+    :end: 110
+  - :styles:
+    - :parens
+    - :italics
+    :text: blob
+    :start: 110
+    :end: 113
+  - :styles:
+    - :parens
+    :text: master
+    :start: 113
+    :end: 122
+  - :styles:
+    - :parens
+    - :italics
+    :text: BTT%20SKR%20V1.4
+    :start: 122
+    :end: 137
+  - :styles:
+    - :parens
+    :text: Hardware/BTT%20SKR%20V1.4PIN.pdf
+    :start: 137
+    :end: 170
+  - :styles: []
+    :text: " for this purpose since they were available to be programmed that way."
+    :start: 170
+    :end: 241
+  :rawparse:
+  - :tag: :square
+    :start: 37
+    :end: 55
+  - :tag: :italics
+    :start: 65
+    :end: 64
+  - :tag: :italics
+    :start: 77
+    :end: 87
+  - :tag: :italics
+    :start: 110
+    :end: 113
+  - :tag: :italics
+    :start: 122
+    :end: 137
+  - :tag: :parens
+    :start: 58
+    :end: 170
+  :rawtext: I used the pins labelled TFT in the [SKR 1.4 Pin diagram](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/blob/master/BTT%20SKR%20V1.4/Hardware/BTT%20SKR%20V1.4PIN.pdf)
+    for this purpose since they were available to be programmed that way.
+
+> I used the pins labelled TFT in the [SKR 1.4 Pin diagram](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/blob/master/BTT%20SKR%20V1.4/Hardware/BTT%20SKR%20V1.4PIN.pdf) for this purpose since they were available to be programmed that way.
+</pre></li><li><pre>block
+tag: div
+type: break
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: div
+type: explicit
+level: 0
+lines: 2
+info: ---
+:spec: image
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: 'src: klipperuart/skr.webp'
+    :start: 0
+    :end: 24
+  :rawparse: []
+  :rawtext: 'src: klipperuart/skr.webp'
+- :array:
+  - :styles: []
+    :text: 'alt: SKR 1.4 excerpt'
+    :start: 0
+    :end: 19
+  :rawparse: []
+  :rawtext: 'alt: SKR 1.4 excerpt'
+
+> src: klipperuart/skr.webp
+> alt: SKR 1.4 excerpt
+</pre></li><li><pre>block
+tag: div
+type: empty
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: div
+type: implicit
+level: 0
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: The ground pin I simply connect to the GND pin on the Pi Zero closest to
+      where the TX and RX pins are located.
+    :start: 0
+    :end: 109
+  :rawparse: []
+  :rawtext: The ground pin I simply connect to the GND pin on the Pi Zero closest
+    to where the TX and RX pins are located.
+
+> The ground pin I simply connect to the GND pin on the Pi Zero closest to where the TX and RX pins are located.
+</pre></li><li><pre>block
+tag: div
+type: empty
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: div
+type: implicit
+level: 0
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: 'I also check the '
+    :start: 0
+    :end: 18
+  - :styles:
+    - :square
+    :text: schematic
+    :start: 18
+    :end: 26
+  - :styles:
+    - :parens
+    :text: https:/
+    :start: 29
+    :end: 35
+  - :styles:
+    - :parens
+    - :italics
+    :text: "/github.com"
+    :start: 36
+    :end: 48
+  - :styles:
+    - :parens
+    - :italics
+    - :italics
+    :text: bigtreetech
+    :start: 48
+    :end: 58
+  - :styles:
+    - :parens
+    :text: BIGTREETECH-SKR-V1.3
+    :start: 58
+    :end: 81
+  - :styles:
+    - :parens
+    - :italics
+    :text: blob
+    :start: 81
+    :end: 84
+  - :styles:
+    - :parens
+    :text: master
+    :start: 84
+    :end: 93
+  - :styles:
+    - :parens
+    - :italics
+    :text: BTT%20SKR%20V1.4
+    :start: 93
+    :end: 108
+  - :styles:
+    - :parens
+    :text: Hardware/BTT%20SKR%20V1.4-SCH.pdf
+    :start: 108
+    :end: 142
+  - :styles: []
+    :text: " to know what the pin names are for those, and it seems like they are "
+    :start: 142
+    :end: 215
+  - :styles:
+    - :code
+    :text: P0.3
+    :start: 215
+    :end: 218
+  - :styles: []
+    :text: " and "
+    :start: 218
+    :end: 226
+  - :styles:
+    - :code
+    :text: P0.2
+    :start: 226
+    :end: 229
+  - :styles: []
+    :text: ". This will be needed when configuring Klipper."
+    :start: 229
+    :end: 277
+  :rawparse:
+  - :tag: :square
+    :start: 18
+    :end: 26
+  - :tag: :italics
+    :start: 36
+    :end: 35
+  - :tag: :italics
+    :start: 48
+    :end: 58
+  - :tag: :italics
+    :start: 81
+    :end: 84
+  - :tag: :italics
+    :start: 93
+    :end: 108
+  - :tag: :parens
+    :start: 29
+    :end: 142
+  - :tag: :code
+    :start: 215
+    :end: 218
+  - :tag: :code
+    :start: 226
+    :end: 229
+  :rawtext: I also check the [schematic](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/blob/master/BTT%20SKR%20V1.4/Hardware/BTT%20SKR%20V1.4-SCH.pdf)
+    to know what the pin names are for those, and it seems like they are `P0.3` and
+    `P0.2`. This will be needed when configuring Klipper.
+
+> I also check the [schematic](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/blob/master/BTT%20SKR%20V1.4/Hardware/BTT%20SKR%20V1.4-SCH.pdf) to know what the pin names are for those, and it seems like they are `P0.3` and `P0.2`. This will be needed when configuring Klipper.
+</pre></li><li><pre>block
+tag: div
+type: break
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: div
+type: explicit
+level: 0
+lines: 2
+info: ---
+:spec: image
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: 'src: klipperuart/pinnums.png'
+    :start: 0
+    :end: 27
+  :rawparse: []
+  :rawtext: 'src: klipperuart/pinnums.png'
+- :array:
+  - :styles: []
+    :text: 'alt: Schematic Excerpt.'
+    :start: 0
+    :end: 22
+  :rawparse: []
+  :rawtext: 'alt: Schematic Excerpt.'
+
+> src: klipperuart/pinnums.png
+> alt: Schematic Excerpt.
+</pre></li><li><pre>block
+tag: div
+type: empty
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li></ol></blockquote>
+  </div>
+</div></blockquote>
+  </div>
+</div><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <pre>section
+type: header
+headerlevel: 2
+listlevel: 0
+blocks 1
+</pre><blockquote><ol><li><pre>block
+tag: header
+type: single
+level: 2
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: Pi Software
+    :start: 0
+    :end: 10
+  :rawparse: []
+  :rawtext: Pi Software
+
+> Pi Software
+</pre></li></ol><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <pre>section
+type: para
+headerlevel: 0
+listlevel: 0
+blocks 13
+</pre><blockquote><ol><li><pre>block
+tag: div
+type: empty
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: div
+type: implicit
+level: 0
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: Now that the pins have been connected a few things have to be done to get
+      this working. Firstly the Pi Zero needs to be configured to communicated using
+      UART. Since these pins are already designated as the UART pins you do not need
+      to designate them in any special way.
+    :start: 0
+    :end: 268
+  :rawparse: []
+  :rawtext: Now that the pins have been connected a few things have to be done to
+    get this working. Firstly the Pi Zero needs to be configured to communicated using
+    UART. Since these pins are already designated as the UART pins you do not need
+    to designate them in any special way.
+
+> Now that the pins have been connected a few things have to be done to get this working. Firstly the Pi Zero needs to be configured to communicated using UART. Since these pins are already designated as the UART pins you do not need to designate them in any special way.
+</pre></li><li><pre>block
+tag: div
+type: break
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: div
+type: implicit
+level: 0
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: 'You need to modify the '
+    :start: 0
+    :end: 24
+  - :styles:
+    - :code
+    :text: config.txt
+    :start: 24
+    :end: 33
+  - :styles: []
+    :text: " file and add to the very bottom, or after the "
+    :start: 33
+    :end: 83
+  - :styles:
+    - :code
+    :text: "[all"
+    :start: 83
+    :end: 86
+  - :styles: []
+    :text: "` section:"
+    :start: 86
+    :end: 97
+  :rawparse:
+  - :tag: :code
+    :start: 24
+    :end: 33
+  - :tag: :code
+    :start: 83
+    :end: 86
+  :rawtext: 'You need to modify the `config.txt` file and add to the very bottom,
+    or after the `[all]` section:'
+
+> You need to modify the `config.txt` file and add to the very bottom, or after the `[all]` section:
+</pre></li><li><pre>block
+tag: div
+type: break
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: div
+type: explicit
+level: 0
+lines: 3
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles:
+    - :square
+    :text: all
+    :start: 1
+    :end: 3
+  :rawparse:
+  - :tag: :square
+    :start: 1
+    :end: 3
+  :rawtext: "[all]"
+- :array:
+  - :styles: []
+    :text: dtoverlay=pi3-miniuart-bt
+    :start: 0
+    :end: 24
+  :rawparse: []
+  :rawtext: dtoverlay=pi3-miniuart-bt
+- :array:
+  - :styles: []
+    :text: enable_uart=1
+    :start: 0
+    :end: 12
+  :rawparse: []
+  :rawtext: enable_uart=1
+
+> [all]
+> dtoverlay=pi3-miniuart-bt
+> enable_uart=1
+</pre></li><li><pre>block
+tag: div
+type: empty
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: p
+type: implicit
+level: 0
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: 'Make sure to check that these things, '
+    :start: 0
+    :end: 39
+  - :styles:
+    - :code
+    :text: pi3-miniuart-bt
+    :start: 39
+    :end: 53
+  - :styles: []
+    :text: " and "
+    :start: 53
+    :end: 61
+  - :styles:
+    - :code
+    :text: enable_uart=1
+    :start: 61
+    :end: 73
+  - :styles: []
+    :text: " are not written anywhere else further up in this file, because you might
+      already be using them for something else. But if you know those pins were never
+      used then you can safely delete those lines containing them."
+    :start: 73
+    :end: 288
+  :rawparse:
+  - :tag: :code
+    :start: 39
+    :end: 53
+  - :tag: :code
+    :start: 61
+    :end: 73
+  :rawtext: Make sure to check that these things, `pi3-miniuart-bt` and `enable_uart=1`
+    are not written anywhere else further up in this file, because you might already
+    be using them for something else. But if you know those pins were never used then
+    you can safely delete those lines containing them.
+
+> Make sure to check that these things, `pi3-miniuart-bt` and `enable_uart=1` are not written anywhere else further up in this file, because you might already be using them for something else. But if you know those pins were never used then you can safely delete those lines containing them.
+</pre></li><li><pre>block
+tag: div
+type: empty
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: p
+type: implicit
+level: 0
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: 'Open your '
+    :start: 0
+    :end: 11
+  - :styles:
+    - :code
+    :text: cmdline.txt
+    :start: 11
+    :end: 21
+  - :styles: []
+    :text: " to make sure that you aren't using those pins to connect to the console
+      too. There might be a "
+    :start: 21
+    :end: 119
+  - :styles:
+    - :code
+    :text: console=serial0,115200
+    :start: 119
+    :end: 140
+  - :styles: []
+    :text: " in there if you are, in which case you might want to do something else
+      for console and delete that from it."
+    :start: 140
+    :end: 249
+  :rawparse:
+  - :tag: :code
+    :start: 11
+    :end: 21
+  - :tag: :code
+    :start: 119
+    :end: 140
+  :rawtext: Open your `cmdline.txt` to make sure that you aren't using those pins
+    to connect to the console too. There might be a `console=serial0,115200` in there
+    if you are, in which case you might want to do something else for console and
+    delete that from it.
+
+> Open your `cmdline.txt` to make sure that you aren't using those pins to connect to the console too. There might be a `console=serial0,115200` in there if you are, in which case you might want to do something else for console and delete that from it.
+</pre></li><li><pre>block
+tag: div
+type: empty
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: p
+type: implicit
+level: 0
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: 'Otherwise, that is all you have to do to enable UART on your Pi. Just
+      reboot your Pi and run '
+    :start: 0
+    :end: 94
+  - :styles:
+    - :code
+    :text: ls /dev/ttyS0
+    :start: 94
+    :end: 106
+  - :styles: []
+    :text: " and "
+    :start: 106
+    :end: 114
+  - :styles:
+    - :code
+    :text: ls /dev/ttyAMA0
+    :start: 114
+    :end: 128
+  - :styles: []
+    :text: " to check if you have one or the other present. Both files might be present
+      too, but that is okay. This file is created by the driver for communicating
+      over UART, and Klipper will use it"
+    :start: 128
+    :end: 315
+  :rawparse:
+  - :tag: :code
+    :start: 94
+    :end: 106
+  - :tag: :code
+    :start: 114
+    :end: 128
+  :rawtext: Otherwise, that is all you have to do to enable UART on your Pi. Just
+    reboot your Pi and run `ls /dev/ttyS0` and `ls /dev/ttyAMA0` to check if you have
+    one or the other present. Both files might be present too, but that is okay. This
+    file is created by the driver for communicating over UART, and Klipper will use
+    it
+
+> Otherwise, that is all you have to do to enable UART on your Pi. Just reboot your Pi and run `ls /dev/ttyS0` and `ls /dev/ttyAMA0` to check if you have one or the other present. Both files might be present too, but that is okay. This file is created by the driver for communicating over UART, and Klipper will use it
+</pre></li><li><pre>block
+tag: div
+type: empty
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li></ol></blockquote>
+  </div>
+</div></blockquote>
+  </div>
+</div><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <pre>section
+type: header
+headerlevel: 2
+listlevel: 0
+blocks 1
+</pre><blockquote><ol><li><pre>block
+tag: header
+type: single
+level: 2
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: MCU Firmware
+    :start: 0
+    :end: 11
+  :rawparse: []
+  :rawtext: MCU Firmware
+
+> MCU Firmware
+</pre></li></ol><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <pre>section
+type: para
+headerlevel: 0
+listlevel: 0
+blocks 9
+</pre><blockquote><ol><li><pre>block
+tag: div
+type: empty
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: p
+type: implicit
+level: 0
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: 'Next, you will need to go into the Klipper directory, which usually involves '
+    :start: 0
+    :end: 78
+  - :styles:
+    - :code
+    :text: cd Klipper
+    :start: 78
+    :end: 87
+  - :styles: []
+    :text: " and run"
+    :start: 87
+    :end: 96
+  :rawparse:
+  - :tag: :code
+    :start: 78
+    :end: 87
+  :rawtext: Next, you will need to go into the Klipper directory, which usually involves
+    `cd Klipper` and run
+
+> Next, you will need to go into the Klipper directory, which usually involves `cd Klipper` and run
 </pre></li><li><pre>block
 tag: div
 type: explicit
@@ -140,6 +1071,258 @@ parse: ---
   :rawtext: make menuconfig
 
 > make menuconfig
+</pre></li><li><pre>block
+tag: div
+type: empty
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: p
+type: implicit
+level: 0
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: 'In my case like I did in the picture above, the SKR 1.4 I connected the
+      pins to '
+    :start: 0
+    :end: 81
+  - :styles:
+    - :code
+    :text: P0.3
+    :start: 81
+    :end: 84
+  - :styles: []
+    :text: " and "
+    :start: 84
+    :end: 92
+  - :styles:
+    - :code
+    :text: P0.2
+    :start: 92
+    :end: 95
+  - :styles: []
+    :text: " so I need to configure them as such:"
+    :start: 95
+    :end: 133
+  :rawparse:
+  - :tag: :code
+    :start: 81
+    :end: 84
+  - :tag: :code
+    :start: 92
+    :end: 95
+  :rawtext: 'In my case like I did in the picture above, the SKR 1.4 I connected the
+    pins to `P0.3` and `P0.2` so I need to configure them as such:'
+
+> In my case like I did in the picture above, the SKR 1.4 I connected the pins to `P0.3` and `P0.2` so I need to configure them as such:
+</pre></li><li><pre>block
+tag: div
+type: explicit
+level: 0
+lines: 2
+info: ---
+:spec: image
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: 'src: klipperuart/menuconfig1.webp'
+    :start: 0
+    :end: 32
+  :rawparse: []
+  :rawtext: 'src: klipperuart/menuconfig1.webp'
+- :array:
+  - :styles: []
+    :text: 'alt: Screenshot from Menuconfig'
+    :start: 0
+    :end: 30
+  :rawparse: []
+  :rawtext: 'alt: Screenshot from Menuconfig'
+
+> src: klipperuart/menuconfig1.webp
+> alt: Screenshot from Menuconfig
+</pre></li><li><pre>block
+tag: div
+type: break
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: p
+type: implicit
+level: 0
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: 'And then I go through the process of flashing my SKR 1.4 by '
+    :start: 0
+    :end: 61
+  - :styles:
+    - :code
+    :text: make
+    :start: 61
+    :end: 64
+  - :styles: []
+    :text: " and then copying the "
+    :start: 64
+    :end: 89
+  - :styles:
+    - :code
+    :text: klipper.bin
+    :start: 89
+    :end: 99
+  - :styles: []
+    :text: " to an SD card and inserting that SD card into my SKR 1.4."
+    :start: 99
+    :end: 158
+  :rawparse:
+  - :tag: :code
+    :start: 61
+    :end: 64
+  - :tag: :code
+    :start: 89
+    :end: 99
+  :rawtext: And then I go through the process of flashing my SKR 1.4 by `make` and
+    then copying the `klipper.bin` to an SD card and inserting that SD card into my
+    SKR 1.4.
+
+> And then I go through the process of flashing my SKR 1.4 by `make` and then copying the `klipper.bin` to an SD card and inserting that SD card into my SKR 1.4.
+</pre></li><li><pre>block
+tag: div
+type: empty
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li></ol></blockquote>
+  </div>
+</div></blockquote>
+  </div>
+</div><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <pre>section
+type: header
+headerlevel: 2
+listlevel: 0
+blocks 1
+</pre><blockquote><ol><li><pre>block
+tag: header
+type: single
+level: 2
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: Klipper configuration
+    :start: 0
+    :end: 20
+  :rawparse: []
+  :rawtext: Klipper configuration
+
+> Klipper configuration
+</pre></li></ol><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <pre>section
+type: para
+headerlevel: 0
+listlevel: 0
+blocks 4
+</pre><blockquote><ol><li><pre>block
+tag: div
+type: empty
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li><li><pre>block
+tag: div
+type: implicit
+level: 0
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: 'Finally we can go into mainsail or anything you use to edit the '
+    :start: 0
+    :end: 65
+  - :styles:
+    - :code
+    :text: printer.cfg
+    :start: 65
+    :end: 75
+  - :styles: []
+    :text: " to enable it. You might need to experiment if your Pi had both "
+    :start: 75
+    :end: 142
+  - :styles:
+    - :code
+    :text: "/dev/ttyS0"
+    :start: 142
+    :end: 151
+  - :styles: []
+    :text: " or "
+    :start: 151
+    :end: 158
+  - :styles:
+    - :code
+    :text: "/dev/ttyAMA0"
+    :start: 158
+    :end: 169
+  - :styles: []
+    :text: " when checking above. Make sure you also have the "
+    :start: 169
+    :end: 222
+  - :styles:
+    - :code
+    :text: 'restart: command'
+    :start: 222
+    :end: 237
+  - :styles: []
+    :text: " line when you use this method since there needs to be a way for Klipper
+      to request that your MCU restart itself, and this method would not work without
+      it."
+    :start: 237
+    :end: 394
+  :rawparse:
+  - :tag: :code
+    :start: 65
+    :end: 75
+  - :tag: :code
+    :start: 142
+    :end: 151
+  - :tag: :code
+    :start: 158
+    :end: 169
+  - :tag: :code
+    :start: 222
+    :end: 237
+  :rawtext: 'Finally we can go into mainsail or anything you use to edit the `printer.cfg`
+    to enable it. You might need to experiment if your Pi had both `/dev/ttyS0` or
+    `/dev/ttyAMA0` when checking above. Make sure you also have the `restart: command`
+    line when you use this method since there needs to be a way for Klipper to request
+    that your MCU restart itself, and this method would not work without it.'
+
+> Finally we can go into mainsail or anything you use to edit the `printer.cfg` to enable it. You might need to experiment if your Pi had both `/dev/ttyS0` or `/dev/ttyAMA0` when checking above. Make sure you also have the `restart: command` line when you use this method since there needs to be a way for Klipper to request that your MCU restart itself, and this method would not work without it.
 </pre></li><li><pre>block
 tag: div
 type: break
@@ -212,6 +1395,8 @@ parse: ---
 > serial: /dev/ttyS0 # or /dev/ttyAMA0
 > restart: command
 </pre></li></ol></blockquote>
+  </div>
+</div></blockquote>
   </div>
 </div></blockquote>
   </div>

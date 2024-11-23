@@ -35,14 +35,46 @@
         <div id="wrapper">
 	        <div class="wrapper-content">
 	            <div class="container">
-<div class="row"><full><pre class="wrapped">title: Micron Mask
-type: blog
+<div class="row"><full><pre class="wrapped">title: Dragonburner Logo Mask
+type: manual
 ---
 
-# Micron Mask
+# Dragonburner Logo Mask for Micron
 
-Put in micron mask
-</pre></full></div>
+  This is a combined mask-diffuser for the dragonburner. It is based on the one in the Dragonburner repo.
+
+  This diffuser is modified to have a mask behind the Micron logo, to reduce light leakage. In order to print it you will need:
+
+1. A *clear* filament and *black* filament of ABS or PETG.
+2. Both clear and black filaments need to be the same material, since otherwise they will not stick to each other. (I have not tested with different types but maybe they will work for you).
+
+
+## How to print
+
+Simply need to go to your slicer and insert a pause at the first layer above the logo hole. Start the print with the black filament, and then at the pause, change to clear filament, and remember to purge out all the black before you resume. You do not need supports
+
+
+## Links
+
+STL is here:
+[[https://github.com/astrobunny/voron-mods/blob/master/micron/STL/masked-diffuser-dragonburner.stl]]
+
+
+I recommend printing with a 0.1 layer height and 0.2 for the first layer, and with all other voron part settings. But go ahead and do whatever you are comfortable with.
+
+
+## Pictures
+
+```image
+src: dragonburner-diffuser/front.png
+alt: Front
+```
+
+
+```image
+src: dragonburner-diffuser/back.png
+alt: Back
+```</pre></full></div>
 	            </div>
 			</div>
 		</div>

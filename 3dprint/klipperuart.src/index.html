@@ -41,13 +41,82 @@ type: manual
 
 # Klipper UART
 
-Connect to klipper using uart.
-Connect TX RX on mcu to RX TX on RPI
-Make sure to connect a ground pin to the ground pin on SPI too
+These are some notes on setting up Klipper on your Raspberry Pi to talk to your MCU, whether it be a Manta or SKR or whatever over UART rather than USB. This can be useful when you are using something like a Raspberry Pi Zero that only has one USB port for data that you would like to reserve for debugging.
+
+## Physical Wiring
+
+Refer to the image below:
+
+```image
+src: klipperuart/kuartconnection.webp
+alt: Wiring
+```
+
+In this image I used a green blue and black wire to do this between a Raspberry Pi Zero and an SKR 1.4. The wires are:
+
+- Black for Ground
+- Green for RX on the SKR 1.4 and TX on the Raspberry Pi
+- Blue for TX on the SKR 1.4 and RX on the Raspberry Pi
+
+I used the pins labelled TFT in the [SKR 1.4 Pin diagram](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/blob/master/BTT%20SKR%20V1.4/Hardware/BTT%20SKR%20V1.4PIN.pdf) for this purpose since they were available to be programmed that way.
+
+
+```image
+src: klipperuart/skr.webp
+alt: SKR 1.4 excerpt
+```
+
+The ground pin I simply connect to the GND pin on the Pi Zero closest to where the TX and RX pins are located.
+
+I also check the [schematic](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/blob/master/BTT%20SKR%20V1.4/Hardware/BTT%20SKR%20V1.4-SCH.pdf) to know what the pin names are for those, and it seems like they are `P0.3` and `P0.2`. This will be needed when configuring Klipper.
+
+
+```image
+src: klipperuart/pinnums.png
+alt: Schematic Excerpt.
+```
+
+## Pi Software
+
+Now that the pins have been connected a few things have to be done to get this working. Firstly the Pi Zero needs to be configured to communicated using UART. Since these pins are already designated as the UART pins you do not need to designate them in any special way.
+
+
+You need to modify the `config.txt` file and add to the very bottom, or after the `[all]` section:
+
+
+```
+[all]
+dtoverlay=pi3-miniuart-bt
+enable_uart=1
+```
+
+  Make sure to check that these things, `pi3-miniuart-bt` and `enable_uart=1` are not written anywhere else further up in this file, because you might already be using them for something else. But if you know those pins were never used then you can safely delete those lines containing them.
+
+  Open your `cmdline.txt` to make sure that you aren't using those pins to connect to the console too. There might be a `console=serial0,115200` in there if you are, in which case you might want to do something else for console and delete that from it.
+
+  Otherwise, that is all you have to do to enable UART on your Pi. Just reboot your Pi and run `ls /dev/ttyS0` and `ls /dev/ttyAMA0` to check if you have one or the other present. Both files might be present too, but that is okay. This file is created by the driver for communicating over UART, and Klipper will use it
+
+## MCU Firmware
+
+  Next, you will need to go into the Klipper directory, which usually involves `cd Klipper` and run
 
 ```
 make menuconfig
 ```
+
+  In my case like I did in the picture above, the SKR 1.4 I connected the pins to `P0.3` and `P0.2` so I need to configure them as such:
+
+```image
+src: klipperuart/menuconfig1.webp
+alt: Screenshot from Menuconfig
+```
+
+
+  And then I go through the process of flashing my SKR 1.4 by `make` and then copying the `klipper.bin` to an SD card and inserting that SD card into my SKR 1.4.
+
+## Klipper configuration
+
+Finally we can go into mainsail or anything you use to edit the `printer.cfg` to enable it. You might need to experiment if your Pi had both `/dev/ttyS0` or `/dev/ttyAMA0` when checking above. Make sure you also have the `restart: command` line when you use this method since there needs to be a way for Klipper to request that your MCU restart itself, and this method would not work without it.
 
 
 ```YAML
