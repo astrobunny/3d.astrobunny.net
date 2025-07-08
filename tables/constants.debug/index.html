@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<!-- Generated using weaver: https://github.com/davidsiaw/weaver -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Constants</title>
+
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+
+    	<link href="../../css/style.css" rel="stylesheet">
+
+
+    <link href="../../css/animate.css" rel="stylesheet">
+
+    <link href="../../css/indigo-blog.css" rel="stylesheet">
+
+
+
+
+</head>
+
+<body class='gray-bg'>
+
+<div id="background" style="z-index: -999; position:absolute; left:0px; right:0px; width:100%; height:100%">
+
+</div>
+
+<div id="content" style="z-index: 0">
+
+        <div id="wrapper">
+	        <div class="wrapper-content">
+	            <div class="container">
+<div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <pre>section
+type: para
+headerlevel: 0
+listlevel: 0
+blocks 1
+</pre><blockquote><ol><li><pre>block
+tag: div
+type: empty
+level: 0
+lines: 0
+info: --- {}
+
+parse: --- []
+
+</pre></li></ol></blockquote>
+  </div>
+</div><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <pre>section
+type: header
+headerlevel: 1
+listlevel: 0
+blocks 1
+</pre><blockquote><ol><li><pre>block
+tag: header
+type: single
+level: 1
+lines: 1
+info: --- {}
+
+parse: ---
+- :array:
+  - :styles: []
+    :text: Constants
+    :start: 0
+    :end: 8
+  :rawparse: []
+  :rawtext: Constants
+
+> Constants
+</pre></li></ol><div class="row">  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <pre>section
+type: para
+headerlevel: 0
+listlevel: 0
+blocks 1
+</pre><blockquote><ol><li><pre>block
+tag: ul
+type: list
+level: 0
+lines: 0
+info: ---
+:tags:
+- &1
+  :type: :branch
+  :parent:
+  :level: 0
+  :tag: :ul
+  :children:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+- :type: :leaf
+  :parent: *1
+  :text:
+  - Speed of light - [(c)] - [( 2.99792458×10^8 )] [(ms^-1)]
+- :type: :leaf
+  :parent: *1
+  :text:
+  - Planck's constant - [(h)] - [( 6.62607015×10^(−34) )] [(Js)]
+- :type: :leaf
+  :parent: *1
+  :text:
+  - Elementary charge - [(e)] - [( 1.602176634×10^(−19) )] [(C)]
+- :type: :leaf
+  :parent: *1
+  :text:
+  - Boltzmann's constant - [(k)] - [( 1.380649×10^(−23) )] [( JK^(-1) )]
+- :type: :leaf
+  :parent: *1
+  :text:
+  - Avogadro's constant - [(N_A)] -  [( 6.02214076×10^(23) )] [( mol^(-1) )]
+:last: *1
+
+parse: ---
+- :type: :branch
+  :parent:
+  :level: 0
+  :tag: :ul
+  :children: &1
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+- :type: :leaf
+  :parent: &2
+    :type: :branch
+    :parent:
+    :level: 0
+    :tag: :ul
+    :children: *1
+  :text:
+  - Speed of light - [(c)] - [( 2.99792458×10^8 )] [(ms^-1)]
+  :parse:
+  - :array:
+    - :styles: []
+      :text: 'Speed of light - '
+      :start: 0
+      :end: 19
+    - :styles:
+      - :sqparens
+      :text: c
+      :start: 19
+      :end: 19
+    - :styles: []
+      :text: " - "
+      :start: 19
+      :end: 27
+    - :styles:
+      - :sqparens
+      :text: " 2.99792458×10^8 "
+      :start: 27
+      :end: 43
+    - :styles: []
+      :text: " "
+      :start: 43
+      :end: 49
+    - :styles:
+      - :sqparens
+      :text: ms^-1
+      :start: 49
+      :end: 53
+    :rawparse:
+    - :tag: :sqparens
+      :start: 19
+      :end: 19
+    - :tag: :sqparens
+      :start: 27
+      :end: 43
+    - :tag: :sqparens
+      :start: 49
+      :end: 53
+    :rawtext: Speed of light - [(c)] - [( 2.99792458×10^8 )] [(ms^-1)]
+- :type: :leaf
+  :parent: *2
+  :text:
+  - Planck's constant - [(h)] - [( 6.62607015×10^(−34) )] [(Js)]
+  :parse:
+  - :array:
+    - :styles: []
+      :text: 'Planck''s constant - '
+      :start: 0
+      :end: 22
+    - :styles:
+      - :sqparens
+      :text: h
+      :start: 22
+      :end: 22
+    - :styles: []
+      :text: " - "
+      :start: 22
+      :end: 30
+    - :styles:
+      - :sqparens
+      :text: " 6.62607015×10^(−34) "
+      :start: 30
+      :end: 50
+    - :styles: []
+      :text: " "
+      :start: 50
+      :end: 56
+    - :styles:
+      - :sqparens
+      :text: Js
+      :start: 56
+      :end: 57
+    :rawparse:
+    - :tag: :sqparens
+      :start: 22
+      :end: 22
+    - :tag: :sqparens
+      :start: 30
+      :end: 50
+    - :tag: :sqparens
+      :start: 56
+      :end: 57
+    :rawtext: Planck's constant - [(h)] - [( 6.62607015×10^(−34) )] [(Js)]
+- :type: :leaf
+  :parent: *2
+  :text:
+  - Elementary charge - [(e)] - [( 1.602176634×10^(−19) )] [(C)]
+  :parse:
+  - :array:
+    - :styles: []
+      :text: 'Elementary charge - '
+      :start: 0
+      :end: 22
+    - :styles:
+      - :sqparens
+      :text: e
+      :start: 22
+      :end: 22
+    - :styles: []
+      :text: " - "
+      :start: 22
+      :end: 30
+    - :styles:
+      - :sqparens
+      :text: " 1.602176634×10^(−19) "
+      :start: 30
+      :end: 51
+    - :styles: []
+      :text: " "
+      :start: 51
+      :end: 57
+    - :styles:
+      - :sqparens
+      :text: C
+      :start: 57
+      :end: 57
+    :rawparse:
+    - :tag: :sqparens
+      :start: 22
+      :end: 22
+    - :tag: :sqparens
+      :start: 30
+      :end: 51
+    - :tag: :sqparens
+      :start: 57
+      :end: 57
+    :rawtext: Elementary charge - [(e)] - [( 1.602176634×10^(−19) )] [(C)]
+- :type: :leaf
+  :parent: *2
+  :text:
+  - Boltzmann's constant - [(k)] - [( 1.380649×10^(−23) )] [( JK^(-1) )]
+  :parse:
+  - :array:
+    - :styles: []
+      :text: 'Boltzmann''s constant - '
+      :start: 0
+      :end: 25
+    - :styles:
+      - :sqparens
+      :text: k
+      :start: 25
+      :end: 25
+    - :styles: []
+      :text: " - "
+      :start: 25
+      :end: 33
+    - :styles:
+      - :sqparens
+      :text: " 1.380649×10^(−23) "
+      :start: 33
+      :end: 51
+    - :styles: []
+      :text: " "
+      :start: 51
+      :end: 57
+    - :styles:
+      - :sqparens
+      :text: " JK^(-1) "
+      :start: 57
+      :end: 65
+    :rawparse:
+    - :tag: :sqparens
+      :start: 25
+      :end: 25
+    - :tag: :sqparens
+      :start: 33
+      :end: 51
+    - :tag: :sqparens
+      :start: 57
+      :end: 65
+    :rawtext: Boltzmann's constant - [(k)] - [( 1.380649×10^(−23) )] [( JK^(-1) )]
+- :type: :leaf
+  :parent: *2
+  :text:
+  - Avogadro's constant - [(N_A)] -  [( 6.02214076×10^(23) )] [( mol^(-1) )]
+  :parse:
+  - :array:
+    - :styles: []
+      :text: 'Avogadro''s constant - '
+      :start: 0
+      :end: 24
+    - :styles:
+      - :sqparens
+      :text: N_A
+      :start: 24
+      :end: 26
+    - :styles: []
+      :text: " -  "
+      :start: 26
+      :end: 35
+    - :styles:
+      - :sqparens
+      :text: " 6.02214076×10^(23) "
+      :start: 35
+      :end: 54
+    - :styles: []
+      :text: " "
+      :start: 54
+      :end: 60
+    - :styles:
+      - :sqparens
+      :text: " mol^(-1) "
+      :start: 60
+      :end: 69
+    :rawparse:
+    - :tag: :sqparens
+      :start: 24
+      :end: 26
+    - :tag: :sqparens
+      :start: 35
+      :end: 54
+    - :tag: :sqparens
+      :start: 60
+      :end: 69
+    :rawtext: Avogadro's constant - [(N_A)] -  [( 6.02214076×10^(23) )] [( mol^(-1)
+      )]
+
+</pre></li></ol></blockquote>
+  </div>
+</div></blockquote>
+  </div>
+</div>
+	            </div>
+			</div>
+		</div>
+
+</div>
+
+    <!-- Mainly scripts -->
+    <script src="../../js/jquery-3.1.1.min.js"></script>
+    <script src="../../js/jquery-ui-1.10.4.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="../../js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			asciimath2jax: {
+				delimiters: [['$$$MATH$$$','$$$ENDMATH$$$']]
+			}
+		});
+	</script>
+    <script src="../../js/MathJax/MathJax.js?config=AM_HTMLorMML-full" async></script>
+
+
+
+
+    <!-- Custom and plugin javascript -->
+    <script src="../../js/weaver.js"></script>
+    
+
+    <script>
+
+
+
+$( document ).ready(function() {
+
+
+
+});
+    </script>
+
+
+
+</body>
+
+</html>
+
