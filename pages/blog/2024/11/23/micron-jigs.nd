@@ -1,9 +1,0 @@
-title: Micron Jigs
-type: blog
----
-
-# Micron Jigs
-
-  I finally got around to moving stuff from the old Gitbook site [[https://3dp.astrobunny.net]] to this site, which I intend to make the main site now.
-
-  I made some [[../../../../3dprint/voronmods/micronjigs]] a couple of months back to provide a simple tool to let me align rails. I didn't really like the original ones, I printed them and found that I still needed to measure where stuff was, and this irked me. If we are going to be using jigs to align them horizontally, they should do the vertical alignment too, otherwise it seems a waste to make them. I decided to take measures into my own hands and make them.
